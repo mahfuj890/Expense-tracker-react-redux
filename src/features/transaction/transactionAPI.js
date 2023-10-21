@@ -19,6 +19,7 @@ export const editTransaction = async (id, data) => {
 };
 
 export const deleteTransaction = async (id) => {
+  console.log("deleteTransaction - id:", id)
   const response = axiosInstance.delete(`/transactions/${id}`);
 
   return response.data;
