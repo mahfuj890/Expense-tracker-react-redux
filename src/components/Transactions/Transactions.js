@@ -1,10 +1,18 @@
+import { useEffect } from "react";
 import Transaction from "./Transaction";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTransactions } from "../../features/transaction/transactionSlice";
+
 
 export default function Transactions() {
   const { transactions, isLoading, isError } = useSelector(
     (state) => state.transaction
   );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTransactions());
+  }, [dispatch]);
 
   // decide what to render
   let content = null;
