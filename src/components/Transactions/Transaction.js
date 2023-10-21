@@ -23,7 +23,7 @@ export default function Transaction({ transaction }) {
     <li className={`transaction ${type}`}>
       <p>{name}</p>
       <div className="right">
-        <p>৳ {amount}</p>
+        <p>৳ {new Intl.NumberFormat("en-IN").format(amount)}</p>
         <button className="link" onClick={handleEdit}>
           <img alt="Edit" className="icon" src={editImage} />
         </button>

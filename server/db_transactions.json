@@ -5,6 +5,12 @@
       "type": "income",
       "amount": 365,
       "id": 1
+    },
+    {
+      "name": "dfhd",
+      "type": "income",
+      "amount": 365346,
+      "id": 2
     }
   ]
 }
